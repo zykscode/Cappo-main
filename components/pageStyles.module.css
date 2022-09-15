@@ -1,0 +1,133 @@
+.normalTextWhite{
+font-family: Rubik;
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.01em;
+
+color: #FFFFFF;
+}
+
+
+
+.largeText{
+font-family: Rubik;
+font-size: 32px;
+font-weight: 500;
+line-height: 48px;
+letter-spacing: 0em;
+}
+
+
+.largeH1Left{
+font-family: Rubik;
+font-size: 64px;
+font-weight: 700;
+line-height: 76px;
+letter-spacing: 0em;
+
+
+}
+
+.largeH2{
+font-family: Rubik;
+font-size: 40px;
+font-weight: 700;
+line-height: 60px;
+letter-spacing: 0em;
+
+}
+
+.largeNormal{
+font-family: Rubik;
+font-size: 20px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.normalTextWhite{
+font-family: Rubik;
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.01em;
+
+}
+
+.normalTextGrey{
+font-family: Rubik;
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.01em;
+
+
+}
+
+.mediumWhite{
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+  
+    
+}
+
+.smallText{
+font-family: Rubik;
+font-size: 16px;
+font-weight: 400;
+line-height: 38px;
+letter-spacing: 0em;
+}
+
+.mediumCenter{
+font-family: Rubik;
+font-size: 18px;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
+
+.textBig{font-family: Rubik;
+font-size: 32px;
+font-weight: 700;
+line-height: 48px;
+letter-spacing: 0.04em;
+text-align: left;
+}
+@media only screen and (max-width: 480px) {
+    .largeH2 {
+      font-size: 20px;
+
+     
+    }
+    .largeH1Left{
+        font-size:32px ;
+        line-height: 1.2;
+   
+       
+    }
+   
+  }
+@media only screen and (max-width: 768px) {
+    .largeH2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+     
+    }
+
+    .largeH1Left{
+        font-size:38px ;
+       
+        line-height:2.75rem ;
+    }
+   
+  }

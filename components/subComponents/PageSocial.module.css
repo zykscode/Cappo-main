@@ -1,0 +1,222 @@
+.pageSocial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap:1.75rem;
+  
+}
+
+.action {
+  position: relative;
+  border-radius: 50%;
+  transition: all 300ms ease-out;
+  width: 2em;
+  height: 2em;
+  margin: 0 0 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+  user-select: none;
+  cursor: pointer;
+}
+
+
+
+
+
+.actionBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram svg {
+  width: 70%;
+  height: 70%;
+  fill: #0D0D2B;
+
+  background: white;
+ 
+
+}
+.instagram:hover svg {
+  width: 70%;
+  height: 70%;
+  fill: white;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+
+  
+}
+
+.youtube svg {
+  width: 50%;
+  height: 50%;
+  fill: white;
+}
+.whatsapp svg {
+  width: 50%;
+  height: 50%;
+  fill: white;
+}
+.whatsapp:hover svg {
+  width: 50%;
+  height: 50%;
+  fill: #00ab6c;
+ background: green;
+ background-clip:text ;
+}
+.youtube:hover svg {
+  width: 50%;
+  height: 50%;
+  fill: red;
+}
+
+.twitter svg {
+  width: 50%;
+  height: 50%;
+  fill: white;
+}
+.twitter:hover svg {
+  width: 50%;
+  height: 50%;
+  fill: #2795e9;
+}
+.linkedin:hover svg {
+  width: 50%;
+  height: 50%;
+  fill: #0077b5;
+}
+.linkedin svg {
+  width: 50%;
+  height: 50%;
+  fill: white;
+  
+}
+
+.actionBgPane {
+  transition: all 300ms ease-out;
+  border-radius: 50%;
+  width: 0;
+  fill: #00ab6c;
+  height: 0;
+}
+
+.action:hover {
+  transition: all 100ms ease-out;
+
+
+}
+
+.action:hover .actionBgPane {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 100ms ease-out;
+}
+
+.action:hover svg {
+  transition: fill 100ms ease-out;
+
+}
+
+
+
+.action:hover .actionBgPane {
+  width: 100%;
+  height: 100%;
+  transition: all 100ms ease-out;
+}
+
+.action:hover svg {
+  transition: fill 100ms ease-out;
+}
+
+
+
+.whatsapp .actionBgPane{
+  background: rgb(255, 255, 255);
+}
+
+.whatsapp:hover{
+  border-color: rgb(255, 255, 255);
+}
+
+
+.twitter .actionBgPane {
+  background: white;
+}
+.twitter:hover {
+  border-color: white;
+}
+
+
+.linkedin .actionBgPane {
+  background: white;
+}
+.linkedin:hover {
+  border-color: white;
+}
+.linkedin{
+background: #0077b5; 
+border-radius: 0%; 
+padding: 12px;
+background-clip: content-box ;
+}
+.linkedin:hover {
+background: #0077b5; 
+border-radius: 0%; 
+padding: 12px;
+background-clip: content-box ;
+}
+
+.youtube .actionBgPane {
+  background: rgb(241, 241, 241);
+}
+.youtube:hover {
+  border-color: rgb(246, 242, 242);
+}
+
+
+.github .actionBgPane {
+  background: #c9510c;
+}
+.github:hover {
+  border-color: #c9510c;
+}
+
+
+.instagram:hover {
+
+background:white;
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .links {
+    position: relative;
+    left: 0.8em;
+    flex-wrap: wrap;
+  }
+  .pageSocial{
+    gap:0.75rem;
+margin-inline: auto;
+
+  }
+
+  .action{
+    border: transparent;
+  }
+ 
+}

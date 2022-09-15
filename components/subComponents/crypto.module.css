@@ -1,0 +1,136 @@
+.cryptoSocial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap:6px;
+    color: var(--fg-color);
+  }
+  
+  .action {
+    position: relative;
+    border-radius: 50%;
+    transition: all 300ms ease-out;
+    width: 100%;
+    height: 100px;
+    margin: 0 0 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  .actionBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .actionBg svg {
+    width: 75%;
+    height: 75%;
+    fill: white;
+  }
+  
+  .actionBgPane {
+    transition: all 300ms ease-out;
+    border-radius: 50%;
+    width: 0;
+    fill: #00ab6c;
+    height: 0;
+  }
+  
+  .action:hover {
+    transition: all 100ms ease-out;
+  
+  
+  }
+  
+  .action:hover .actionBgPane {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 100ms ease-out;
+  }
+  
+  .action:hover svg {
+    transition: fill 100ms ease-out;
+    fill: white;
+  }
+  
+  :global(.dark-mode) .action:hover svg {
+    fill: white;
+  }
+  
+  .facebook .actionBgPane {
+    background: #3b5998;
+  }
+  .facebook:hover {
+    border-color: #3b5998;
+  }
+  
+  .whatsapp .actionBgPane{
+    background: rgb(20, 193, 20);
+  }
+  
+  .whatsapp:hover{
+    border-color: rgb(255, 255, 255);
+  }
+  
+  .visa .actionBgPane {
+    background: #2795e9;
+  }
+  .visa:hover {
+    border-color: #2795e9;
+  }
+  
+  .bitcoin .actionBgPane {
+    background: #0077b5;
+  }
+  .bitcoin:hover {
+    border-color: #0077b5;
+  }
+  .bitcoin{
+    color: white;
+  }
+  
+  .github .actionBgPane {
+    background: #c9510c;
+  }
+  .github:hover {
+    border-color: #c9510c;
+  }
+  
+  .mastercard .actionBgPane {
+    background: #ffffff;
+  }
+  .mastercard:hover {
+    border-color: #ffffff;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .links {
+      position: relative;
+      left: 0.8em;
+      flex-wrap: wrap;
+    }
+    .action{
+      border: transparent;
+    }
+   
+  }
+  

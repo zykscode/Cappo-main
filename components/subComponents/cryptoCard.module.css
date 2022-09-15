@@ -1,0 +1,117 @@
+
+  .action {
+    position: relative;
+    border-radius: 50%;
+    transition: all 300ms ease-out;
+    width: 100%;
+    height: 100px;
+    margin: 0 0 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .active, .btn:hover {
+    background: #2B076E;
+
+  }
+  
+  
+  .actionBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .actionBg svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+  }
+  
+  .actionBgPane {
+    transition: all 300ms ease-out;
+    border-radius: 0%;
+    width: 0;
+    fill: #00ab6c;
+    height: 100%;
+  }
+  
+  .action:hover {
+    transition: all 100ms ease-out;
+  
+  
+  }
+  
+  .bitcoin svg {
+    width: 80px;
+    height: 80px;
+    fill: #FFA200;
+    background: white;
+    border-radius: 50%;
+  }
+  .litecoin svg {
+    width: 80px;
+    height: 80px;
+    fill: green;
+  }
+  .ethereum svg {
+    width: 80px;
+    height: 80px;
+    background: #1181E8;
+    border-radius: 50%;
+    fill: white;
+
+  }
+
+
+
+  
+  .action:hover .actionBgPane {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 100ms ease-out;
+  }
+  
+
+  
+  :global(.dark-mode) .action:hover svg {
+    fill: white;
+  }
+  
+
+  
+  
+.parent {
+    background: green;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .parent[data-isOpen="true"] {
+    width: 200%;
+    height: 100%;
+  }
+  
+  .child {
+    width: 40px;
+    height: 40px;
+    background: #f107a3;
+    border-radius: 50%;
+  }
+  
