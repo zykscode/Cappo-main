@@ -7,7 +7,7 @@ import { MenuToggle } from './subComponents/MenuToggle'
 
 import { useRef } from 'react'
 import { motion, useCycle, AnimatePresence } from 'framer-motion'
-import useWindowDimensions, { getWindowSize, useDimensions } from './subComponents/use-dimensions'
+
 import { Navigation } from './subComponents/Navigation'
 import styles from './subComponents/styles.module.css'
 import Image from 'next/image'
@@ -53,12 +53,24 @@ const Header = () => {
     const [isOpen, toggleOpen] = useCycle(false, true)
     const containerRef = useRef(null)
     const [navShow, setNavShow] = useState(false)
-    // const { height } = useDimensions(containerRef);
+
+    const onToggleNav = () => {
+        setNavShow((status) => {
+            if (status) {
+                document.body.style.overflow = 'auto'
+            } else {
+                // Prevent scrolling
+                document.body.style.overflow = 'hidden'
+            }
+
+            return !status
+        })
+    }
 
     return (
         <header className=" mx-auto mt-2   flex max-w-[1200px] items-center justify-between  p-2  text-white lg:flex-row">
             <div className="min-h-[40px] w-[135px]">
-                <Image src={logo} />
+                <Image alt="logo" src={logo} />
             </div>
             <div className="my-auto hidden gap-4 lg:flex lg:gap-8  lg:text-base">
                 <nav className="flex items-center gap-8">
@@ -95,15 +107,18 @@ const Header = () => {
                 </div>
             </div>
             <div className="justify-end lg:hidden ">
-                {/* <motion.nav animate={isOpen ? 'open' : 'closed'} className="z-50 ">
-                    <motion.div
-                        className={`fixed bg-blue-300 ${styles.background}`}
-                        variants={sidebar}
-                    />
-                    <Navigation />
+                <motion.nav animate={isOpen ? 'open' : 'closed'} className="z-10 ">
+                    <motion.div className={` z-10  ${styles.background}`} variants={sidebar}>
+                        <Navigation />
+                    </motion.div>
 
-                    <MenuToggle toggle={() => toggleOpen()} />
-                </motion.nav> */}
+                    <MenuToggle
+                        toggle={() => {
+                            toggleOpen()
+                            onToggleNav()
+                        }}
+                    />
+                </motion.nav>
             </div>
         </header>
     )

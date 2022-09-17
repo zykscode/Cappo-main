@@ -6,9 +6,7 @@ import ribbon1 from '../public/static/images/hero-ribbon-1.png'
 import ribbon2 from '../public/static/images/hero-ribbon-2.png'
 
 import Header from './Header'
-import { FaChevronCircleRight } from '@react-icons/all-files/fa/FaChevronCircleRight'
 
-import { motion, useCycle } from 'framer-motion'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
@@ -21,7 +19,7 @@ const LayoutWrapper = ({ children }) => {
     return (
         <SectionContainer>
             <div>
-                <div className="min-h-[850px] max-w-[1440px] bg-[url('../public/static/images/hero-bg.png')] px-3">
+                <div className="bg-[url('../public/static/images/hero-bg.png')] px-3 lg:min-h-[850px] lg:max-w-[1440px]">
                     <Header />
                     <section className="  text-white  ">
                         <div className="container mx-auto mt-[51px] max-w-[1220px]">
@@ -30,10 +28,10 @@ const LayoutWrapper = ({ children }) => {
                                     data-aos="fade-right"
                                     className="mx-auto max-w-[588px]  lg:left-0 lg:max-h-[468px]"
                                 >
-                                    <div className="flex min-h-[40px] max-w-[365px] items-center  rounded-3xl bg-[#ffffffa1]">
+                                    <div className="flex min-h-[40px] max-w-[365px] items-center  rounded-3xl bg-[#ffffff1a] ">
                                         <button className="top-[80px] flex  h-[32px] w-[113px] items-center justify-center rounded-[32px] bg-[#FFFFFF]  capitalize">
                                             <h3
-                                                className="min-h-[24px] max-w-[81px] text-[#0D0D2B]"
+                                                className="min-h-[24px] max-w-[81px]  bg-white text-[#0D0D2B]"
                                                 style={{
                                                     fontFamily: 'Rubik',
                                                     fontStyle: 'normal',
@@ -45,13 +43,14 @@ const LayoutWrapper = ({ children }) => {
                                             </h3>
                                         </button>
                                         <span
-                                            className="mr-[11px] h-[28px] w-[221px]"
+                                            className="ml-[11px] h-[28px] w-[221px]"
                                             style={{
                                                 fontFamily: 'Rubik',
                                                 fontStyle: 'normal',
                                                 fontSize: '16px',
                                                 fontWeight: 400,
                                                 lineHeight: '148%',
+                                                color: '#fffff',
                                             }}
                                         >
                                             For the Black Friday weekend
@@ -89,15 +88,15 @@ const LayoutWrapper = ({ children }) => {
                                     </button>
                                 </div>
                                 <div
-                                    className="  top-0 min-h-[585.15px] max-w-[604px] "
+                                    className="  top-0 max-w-[604px] lg:min-h-[585.15px] "
                                     data-aos="zoom-in"
                                 >
                                     <Image alt="alt" src={Hero} />{' '}
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute  top-[389px]">
-                            <div className="ml-[131px] mt-[43.81px]" data-aos="fade-right">
+                        <div className="hidden lg:absolute lg:top-[389px] lg:block">
+                            <div className="ml-[131px] lg:mt-[43.81px]" data-aos="fade-right">
                                 <Image alt="alt" src={ribbon1} />
                             </div>
                         </div>

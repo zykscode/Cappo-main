@@ -30,7 +30,7 @@ const variant = {
 }
 
 export const Navigation = ({ isOpen }) => (
-    <div className="mx-auto flex flex-col justify-center gap-8">
+    <div className="z-20 mx-auto flex flex-col justify-center gap-8">
         <motion.ul
             variants={variants}
             className={`flex flex-col justify-center gap-8 to-blue-600 ${styles.ul}`}

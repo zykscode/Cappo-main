@@ -7,11 +7,13 @@ import Why from '../public/static/images/whyimg.png'
 import Feature from '../public/static/images/feature-3-img.png'
 import { Table } from 'flowbite-react'
 import { useEffect } from 'react'
+import { FcGlobe } from '@react-icons/all-files/fc/FcGlobe'
+
 export default function Home() {
     return (
         <>
             <section data-aos="fade-up" className=" relative mx-auto max-w-[1220px]">
-                <div className="absolute mx-auto mt-[0px]  h-[355.17px]  w-[355.17px]   lg:ml-[1070px] ">
+                <div className="mx-auto mt-[0px] hidden w-[355.17px] lg:absolute  lg:ml-[1070px]  lg:block   lg:h-[355.17px] ">
                     <div
                         className="overflow-hidden rounded-b-full lg:overflow-visible"
                         style={{
@@ -114,7 +116,29 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="flex h-[92px] w-[334px] gap-6">
-                        <div className="h-[80px] w-[80px]"></div>
+                        <div className="flex h-[80px] w-[80px] justify-center rounded-full bg-slate-900 align-middle hover:animate-spin">
+                            <svg
+                                stroke="currentColor"
+                                fill="currentColor"
+                                strokeWidth="0"
+                                version="1"
+                                viewBox="0 0 48 48"
+                                enableBackground="new 0 0 48 48"
+                                className=" my-auto mx-auto"
+                                height="40px"
+                                width="40px"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fill="#7CB342"
+                                    d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z"
+                                ></path>
+                                <path
+                                    fill="#0277BD"
+                                    d="M45,24c0,11.7-9.5,21-21,21S3,35.7,3,24S12.3,3,24,3S45,12.3,45,24z M23.8,33.7c0-0.4-0.2-0.6-0.6-0.8 c-1.3-0.4-2.5-0.4-3.6-1.5c-0.2-0.4-0.2-0.8-0.4-1.3c-0.4-0.4-1.5-0.6-2.1-0.8c-0.8,0-1.7,0-2.7,0c-0.4,0-1.1,0-1.5,0 c-0.6-0.2-1.1-1.1-1.5-1.7c0-0.2,0-0.6-0.4-0.6c-0.4-0.2-0.8,0.2-1.3,0c-0.2-0.2-0.2-0.4-0.2-0.6c0-0.6,0.4-1.3,0.8-1.7 c0.6-0.4,1.3,0.2,1.9,0.2c0.2,0,0.2,0,0.4,0.2c0.6,0.2,0.8,1,0.8,1.7c0,0.2,0,0.4,0,0.4c0,0.2,0.2,0.2,0.4,0.2 c0.2-1.1,0.2-2.1,0.4-3.2c0-1.3,1.3-2.5,2.3-2.9c0.4-0.2,0.6,0.2,1.1,0c1.3-0.4,4.4-1.7,3.8-3.4c-0.4-1.5-1.7-2.9-3.4-2.7 c-0.4,0.2-0.6,0.4-1,0.6c-0.6,0.4-1.9,1.7-2.5,1.7c-1.1-0.2-1.1-1.7-0.8-2.3c0.2-0.8,2.1-3.6,3.4-3.1c0.2,0.2,0.6,0.6,0.8,0.8 c0.4,0.2,1.1,0.2,1.7,0.2c0.2,0,0.4,0,0.6-0.2c0.2-0.2,0.2-0.2,0.2-0.4c0-0.6-0.6-1.3-1-1.7c-0.4-0.4-1.1-0.8-1.7-1.1 c-2.1-0.6-5.5,0.2-7.1,1.7s-2.9,4-3.8,6.1c-0.4,1.3-0.8,2.9-1,4.4c-0.2,1-0.4,1.9,0.2,2.9c0.6,1.3,1.9,2.5,3.2,3.4 c0.8,0.6,2.5,0.6,3.4,1.7c0.6,0.8,0.4,1.9,0.4,2.9c0,1.3,0.8,2.3,1.3,3.4c0.2,0.6,0.4,1.5,0.6,2.1c0,0.2,0.2,1.5,0.2,1.7 c1.3,0.6,2.3,1.3,3.8,1.7c0.2,0,1-1.3,1-1.5c0.6-0.6,1.1-1.5,1.7-1.9c0.4-0.2,0.8-0.4,1.3-0.8c0.4-0.4,0.6-1.3,0.8-1.9 C23.8,35.1,24,34.3,23.8,33.7z M24.2,14.3c0.2,0,0.4-0.2,0.8-0.4c0.6-0.4,1.3-1.1,1.9-1.5c0.6-0.4,1.3-1.1,1.7-1.5 c0.6-0.4,1.1-1.3,1.3-1.9c0.2-0.4,0.8-1.3,0.6-1.9c-0.2-0.4-1.3-0.6-1.7-0.8c-1.7-0.4-3.1-0.6-4.8-0.6c-0.6,0-1.5,0.2-1.7,0.8 c-0.2,1.1,0.6,0.8,1.5,1.1c0,0,0.2,1.7,0.2,1.9c0.2,1-0.4,1.7-0.4,2.7c0,0.6,0,1.7,0.4,2.1L24.2,14.3z M41.8,29 c0.2-0.4,0.2-1.1,0.4-1.5c0.2-1,0.2-2.1,0.2-3.1c0-2.1-0.2-4.2-0.8-6.1c-0.4-0.6-0.6-1.3-0.8-1.9c-0.4-1.1-1-2.1-1.9-2.9 c-0.8-1.1-1.9-4-3.8-3.1c-0.6,0.2-1,1-1.5,1.5c-0.4,0.6-0.8,1.3-1.3,1.9c-0.2,0.2-0.4,0.6-0.2,0.8c0,0.2,0.2,0.2,0.4,0.2 c0.4,0.2,0.6,0.2,1,0.4c0.2,0,0.4,0.2,0.2,0.4c0,0,0,0.2-0.2,0.2c-1,1.1-2.1,1.9-3.1,2.9c-0.2,0.2-0.4,0.6-0.4,0.8 c0,0.2,0.2,0.2,0.2,0.4c0,0.2-0.2,0.2-0.4,0.4c-0.4,0.2-0.8,0.4-1.1,0.6c-0.2,0.4,0,1.1-0.2,1.5c-0.2,1.1-0.8,1.9-1.3,2.9 c-0.4,0.6-0.6,1.3-1,1.9c0,0.8-0.2,1.5,0.2,2.1c1,1.5,2.9,0.6,4.4,1.3c0.4,0.2,0.8,0.2,1.1,0.6c0.6,0.6,0.6,1.7,0.8,2.3 c0.2,0.8,0.4,1.7,0.8,2.5c0.2,1,0.6,2.1,0.8,2.9c1.9-1.5,3.6-3.1,4.8-5.2C40.6,32.4,41.2,30.7,41.8,29z"
+                                ></path>
+                            </svg>
+                        </div>
                         <div className="flex h-[92px] flex-col text-white">
                             <h3
                                 style={{
@@ -151,7 +175,7 @@ export default function Home() {
                         data-aos-offset="240"
                         className="container absolute -ml-[402.86px] mt-[125.8px]"
                     >
-                        <Image src={ribbon2} />
+                        <Image alt="alt" src={ribbon2} />
                     </div>
                     <div className="flex flex-col items-center gap-x-8 lg:flex-row">
                         <div
@@ -159,7 +183,7 @@ export default function Home() {
                             data-aos-offset="240"
                             className="  top-0 order-2   min-h-[473px] max-w-[650px]  lg:order-1"
                         >
-                            <Image src={Why} />
+                            <Image alt="alt" src={Why} />
                         </div>
 
                         <div
@@ -213,9 +237,9 @@ export default function Home() {
                             </button>
                         </div>
                     </div>
-                    <div className="absolute -mt-[233px]  -mr-0 h-[240px]  w-[240px]   lg:ml-[1116px] ">
+                    <div className=" -mt-[233px]  -mr-0 h-[240px]  w-[240px]   lg:ml-[1116px] ">
                         <div
-                            className="overflow-hidden rounded rounded-b-full lg:overflow-visible"
+                            className="hidden overflow-hidden  rounded rounded-b-full bg-green-300 lg:flex lg:overflow-visible"
                             style={{
                                 height: '120px',
                                 width: '240px',
@@ -229,10 +253,10 @@ export default function Home() {
                 <section
                     data-aos="zoom-in"
                     data-aos-offset="240"
-                    className="mx-auto min-h-[457px] max-w-[1220px]"
+                    className="mx-auto min-h-[457px] max-w-[1220px] lg:mt-[100px]"
                 >
                     <div className="">
-                        <h2 className={`${styles.largeH2} mt-[100px] text-center text-white`}>
+                        <h2 className={`${styles.largeH2}  text-center text-white`}>
                             Check how much you can earn
                         </h2>
                         <h3
@@ -244,14 +268,14 @@ export default function Home() {
                     </div>
                 </section>
             </section>
-            <section className="mx-auto -mt-[155px]  flex max-w-[1440px] flex-col bg-white">
+            <section className="mx-auto flex  max-w-[1440px] flex-col bg-white lg:-mt-[155px]">
                 <section
                     data-aos="zoom-in"
                     data-aos-offset="240"
                     className="-mt-[155px] flex min-h-[371px] max-w-[942px] flex-col items-center lg:mx-[249px]"
                 >
                     <div
-                        className={` flex  h-[155px] w-full   flex-col rounded-t-2xl bg-[#fbfcfe] p-12`}
+                        className={` flex  w-full flex-col   rounded-t-2xl bg-[#fbfcfe] p-12 lg:h-[155px]`}
                     >
                         <form
                             action=""
@@ -270,7 +294,7 @@ export default function Home() {
                                 <option value="">GH/s</option>
                             </select>
 
-                            <button className="  flex h-[59px] w-[147px] items-center justify-center gap-[24px] rounded-[32px] bg-[#3671E9]   text-white">
+                            <button className="  flex h-[59px] w-[147px] items-center justify-center rounded-[32px] bg-[#3671E9] text-white   lg:gap-[24px]">
                                 <h3
                                     style={{
                                         fontFamily: 'Rubik',
@@ -288,26 +312,22 @@ export default function Home() {
                         </form>{' '}
                     </div>
 
-                    <div className="ml-12 flex min-h-[216px] w-full flex-col flex-col rounded-br-2xl">
+                    <div className="ml-12 flex min-h-[216px] w-full flex-col rounded-br-2xl px-4 lg:px-0">
                         <h3 className={` mt-[48px] text-[#3671E9]`}>ESTIMATED 24 HOUR REVENUE:</h3>
-                        <div className=" mt-[16px]">
+                        <div className="mt-[16px] flex  flex-col">
                             <h3 className={`${styles.textBig}`}>
                                 0.055 130 59 ETH <span className="text-[#3671E9]">($1275)</span>
                             </h3>
-                            <p className={`${styles.normalTextGrey} mt-1 text-[#828282]`}>
+                            <p className={`${styles.normalTextGrey}   mt-1 text-[#828282]`}>
                                 Revenue will change based on mining difficulty and Ethereum price.
                             </p>
                         </div>
                     </div>
                 </section>{' '}
                 <h2
-                    style={{
-                        fontSize: '40px',
-                        fontWeight: 700,
-                        lineHeight: '60px',
-                        letterSpacing: '0em',
-                    }}
-                    className=" text-[0D0D2B] mx-auto mb-2 mt-[100px] min-h-[120px] max-w-[741px] text-center lg:mb-[64px] "
+                    data-aos="fade-up"
+                    data-offset-aos="300"
+                    className={`${styles.largeH2} text-[0D0D2B] mx-auto mb-2 mt-[100px] min-h-[120px] max-w-[741px] text-center lg:mb-[64px] `}
                 >
                     Trade securely and market the high growth cryptocurrencies.
                 </h2>
@@ -637,301 +657,9 @@ export default function Home() {
                             </h3>
                         </button>
                     </div>
-                    <div className=" z-20 h-[334px] max-w-[682px] flex-1 rounded-[16px] bg-[#35068C] opacity-100 backdrop-blur-sm ">
-                        <Table>
-                            <Table.Head className="text-white ">
-                                <Table.HeadCell></Table.HeadCell>
-                                <Table.HeadCell
-                                    className="pt-[40px] pb-[30px] capitalize text-white"
-                                    style={{
-                                        fontFamily: 'Inter',
-                                        fontSize: '14px',
-                                        fontWeight: 600,
-                                        lineHeight: '17px',
-                                        letterSpacing: '0em',
-                                        textAlign: 'left',
-                                    }}
-                                >
-                                    Price
-                                </Table.HeadCell>
-                                <Table.HeadCell
-                                    className="pt-[40px] pb-[30px] capitalize text-white"
-                                    style={{
-                                        fontFamily: 'Inter',
-                                        fontSize: '14px',
-                                        fontWeight: 600,
-                                        lineHeight: '17px',
-                                        letterSpacing: '0em',
-                                        textAlign: 'left',
-                                    }}
-                                >
-                                    Change
-                                </Table.HeadCell>
-                                <Table.HeadCell
-                                    className="pt-[40px] pb-[30px] capitalize text-white"
-                                    style={{
-                                        fontFamily: 'Inter',
-                                        fontSize: '14px',
-                                        fontWeight: 600,
-                                        lineHeight: '17px',
-                                        letterSpacing: '0em',
-                                        textAlign: 'left',
-                                    }}
-                                >
-                                    Volume (24h)
-                                </Table.HeadCell>
-                            </Table.Head>
-                            <Table.Body>
-                                <Table.Row className="hover:-translate-x-[72px] hover:bg-[#4610ad] active:-translate-x-[72px]  active:bg-[#4610ad] ">
-                                    <Table.Cell className="whitespace-nowrap rounded-l-2xl font-medium">
-                                        <div className="flex pl-[40px]">
-                                            <svg
-                                                viewBox="0 0 24 24"
-                                                className="h-[40px] w-[40px] rounded-full bg-white fill-[#F9AA4B]"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z"></path>
-                                            </svg>
-                                            <div className="flex flex-col">
-                                                <h2
-                                                    className="h-[24px] w-[41px] pl-[16px] uppercase text-white"
-                                                    style={{
-                                                        fontFamily: 'Inter',
-                                                        fontSize: '20px',
-                                                        fontWeight: 700,
-                                                        lineHeight: '24.2px',
-                                                        letterSpacing: '0em',
-                                                        textAlign: 'left',
-                                                    }}
-                                                >
-                                                    BTC
-                                                </h2>
-                                                <h2
-                                                    className="pl-[16px] capitalize text-[#F2F2F2]"
-                                                    style={{
-                                                        fontFamily: 'Inter',
-                                                        fontSize: '16px',
-                                                        fontWeight: 400,
-                                                        lineHeight: '19.36px',
-                                                        letterSpacing: '0em',
-                                                        textAlign: 'left',
-                                                    }}
-                                                >
-                                                    Bitcoin
-                                                </h2>
-                                            </div>
-                                        </div>
-                                    </Table.Cell>
-                                    <Table.Cell
-                                        className="text-[#F2F2F2]"
-                                        style={{
-                                            fontFamily: 'Inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        $6750
-                                    </Table.Cell>
-                                    <Table.Cell
-                                        className="text-[#8FFFBE]"
-                                        style={{
-                                            fontFamily: 'Inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        +7.3%
-                                    </Table.Cell>
-                                    <Table.Cell
-                                        className="rounded-r-2xl text-[#F2F2F2]"
-                                        style={{
-                                            fontFamily: 'inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        $3420214
-                                    </Table.Cell>
-                                </Table.Row>
-                                <Table.Row className="hover:-translate-x-[72px] hover:bg-[#4610ad] active:-translate-x-[72px] active:bg-[#4610ad] ">
-                                    <Table.Cell className="whitespace-nowrap rounded-l-2xl font-medium">
-                                        <div className="flex  pl-[40px] text-white">
-                                            <div className="flex h-[40px] w-[40px] items-center justify-center  rounded-full bg-[#1181E8]">
-                                                <svg
-                                                    viewBox="0 0 312 520"
-                                                    className="h-[20px] w-[20px]  rounded-full  fill-white"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path>{' '}
-                                                </svg>
-                                            </div>
-                                            <div className="flex flex-col">
-                                                <h2
-                                                    className="h-[24px] w-[41px] pl-[16px] uppercase text-white"
-                                                    style={{
-                                                        fontFamily: 'Inter',
-                                                        fontSize: '20px',
-                                                        fontWeight: 700,
-                                                        lineHeight: '24.2px',
-                                                        letterSpacing: '0em',
-                                                        textAlign: 'left',
-                                                    }}
-                                                >
-                                                    Eth
-                                                </h2>
-                                                <h2
-                                                    className="pl-[16px] capitalize text-[#F2F2F2]"
-                                                    style={{
-                                                        fontFamily: 'Inter',
-                                                        fontSize: '16px',
-                                                        fontWeight: 400,
-                                                        lineHeight: '19.36px',
-                                                        letterSpacing: '0em',
-                                                        textAlign: 'left',
-                                                    }}
-                                                >
-                                                    Ethereum
-                                                </h2>
-                                            </div>
-                                        </div>
-                                    </Table.Cell>
-                                    <Table.Cell
-                                        className="text-[#F2F2F2]"
-                                        style={{
-                                            fontFamily: 'Inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        $156.83
-                                    </Table.Cell>
-                                    <Table.Cell
-                                        className="text-[#FF7676]"
-                                        style={{
-                                            fontFamily: 'Inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        -0.9%
-                                    </Table.Cell>
-                                    <Table.Cell
-                                        className="rounded-r-2xl text-[#F2F2F2]"
-                                        style={{
-                                            fontFamily: 'inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        $1812350
-                                    </Table.Cell>
-                                </Table.Row>
-                                <Table.Row className="hover:-translate-x-[72px] hover:bg-[#4610ad] active:-translate-x-[72px] active:bg-[#4610ad]">
-                                    <Table.Cell className="whitespace-nowrap rounded-l-2xl font-medium">
-                                        <div className="flex pl-[40px]">
-                                            <div className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-[#59C19C]">
-                                                <div className="flex h-[20px] w-[20px] items-center justify-center rounded-full  rounded-full bg-white  ">
-                                                    <svg
-                                                        viewBox="0 0 24 24"
-                                                        className="h-[40px] w-[20px]  fill-[#59c19c] "
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                        <path d="M12 0a12 12 0 1012 12A12 12 0 0012 0zm-.2617 3.6777h2.584a.3425.3425 0 01.33.4356l-2.0312 6.918 1.9062-.582-.4082 1.3847-1.9238.5605-1.248 4.213h6.6757a.3425.3425 0 01.3282.4374l-.582 2a.4586.4586 0 01-.4395.3301H6.7324l1.7227-5.8223-1.9063.5801.42-1.3613 1.9101-.58 2.4219-8.1798a.4557.4557 0 01.4375-.334Z"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div className="flex flex-col">
-                                                <h2
-                                                    className="h-[24px] w-[41px] pl-[16px] uppercase text-white"
-                                                    style={{
-                                                        fontFamily: 'Inter',
-                                                        fontSize: '20px',
-                                                        fontWeight: 700,
-                                                        lineHeight: '24.2px',
-                                                        letterSpacing: '0em',
-                                                        textAlign: 'left',
-                                                    }}
-                                                >
-                                                    BTC
-                                                </h2>
-                                                <h2
-                                                    className="pl-[16px] capitalize text-[#F2F2F2]"
-                                                    style={{
-                                                        fontFamily: 'Inter',
-                                                        fontSize: '16px',
-                                                        fontWeight: 400,
-                                                        lineHeight: '19.36px',
-                                                        letterSpacing: '0em',
-                                                        textAlign: 'left',
-                                                    }}
-                                                >
-                                                    Bitcoin
-                                                </h2>
-                                            </div>
-                                        </div>
-                                    </Table.Cell>
-                                    <Table.Cell
-                                        className="text-[#F2F2F2]"
-                                        style={{
-                                            fontFamily: 'Inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        $8535
-                                    </Table.Cell>
-                                    <Table.Cell
-                                        className="text-[#8FFFBE]"
-                                        style={{
-                                            fontFamily: 'Inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        +8.2%
-                                    </Table.Cell>{' '}
-                                    <Table.Cell
-                                        className="rounded-r-2xl text-[#F2F2F2]"
-                                        style={{
-                                            fontFamily: 'inter',
-                                            fontSize: '16px',
-                                            fontWeight: 400,
-                                            lineHeight: '19.36px',
-                                            letterSpacing: '0em',
-                                            textAlign: 'left',
-                                        }}
-                                    >
-                                        $5820399
-                                    </Table.Cell>
-                                </Table.Row>
-                            </Table.Body>
-                        </Table>
-                        <div className="lg:hidden ">
-                            <Image src={Feature} />
+                    <div className=" z-20 h-[334px] max-w-[682px] flex-1 rounded-[16px] bg-[#35068C]  opacity-100 backdrop-blur-sm ">
+                        <div>
+                            <Image alt="alt" src={Feature} />
                         </div>
                     </div>
                 </div>
@@ -944,9 +672,38 @@ export default function Home() {
                 ></div>
             </div>
             <div className="flex min-h-[392px] max-w-[1440px]   flex-col justify-center bg-[url('../public/static/images/newsletter-bg.png')] bg-no-repeat ">
-                <div className="container mx-auto min-h-[216px] max-w-[1220px] bg-[url('../public/static/images/newsletter-box(1).png')] bg-no-repeat">
-                    {' '}
-                    hrlwe
+                <div className="container mx-auto flex min-h-[216px] max-w-[1220px] bg-[url('../public/static/images/newsletter-box(1).png')] bg-cover bg-no-repeat">
+                    <div className="mx-auto mb-2 flex flex-col items-center justify-between rounded-r-2xl align-middle lg:flex-row">
+                        <div className="m-12  flex min-h-[120px] max-w-[501px] flex-col ">
+                            <h3 className={`${styles.textBig} text-white`}>Start mining now</h3>
+                            <h3
+                                className={`${styles.normalTextwhite} mt-4 max-w-[385px] text-white`}
+                            >
+                                Join now with CRAPPO to get the latest news and start mining now
+                            </h3>
+                        </div>
+                        <div className=" flex min-h-[55px] flex-col items-center justify-center gap-2 align-middle lg:max-w-[566px]  lg:flex-row lg:gap-10">
+                            <input
+                                type="email"
+                                className="input  h-[35px] w-full  border-0 border-b-2 border-white bg-[#3671E9] text-base text-white placeholder:text-base placeholder:text-white focus:border-0 focus:border-b-2 focus:border-white lg:w-[357px]"
+                                placeholder="Enter your email"
+                            />
+                            <button className="  flex h-[55px] w-[152px] items-center justify-center gap-[24px] rounded-[32px] bg-[#ffffff]   text-black">
+                                <h3
+                                    style={{
+                                        fontFamily: 'Rubik',
+                                        fontStyle: 'normal',
+                                        fontSize: '18px',
+                                        fontWeight: 500,
+                                        lineHeight: '27px',
+                                        textAlign: 'center',
+                                    }}
+                                >
+                                    Subscribe
+                                </h3>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             {/*<div

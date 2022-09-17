@@ -1,9 +1,7 @@
-import { FaEthereum } from '@react-icons/all-files/fa/FaEthereum'
-import { SiLitecoin } from '@react-icons/all-files/Si/SiLitecoin'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './cryptoCard.module.css'
 import cs from 'classnames'
-import { motion } from 'framer-motion'
+
 const Crypto = [
     {
         name: 'bitcoin',
@@ -11,6 +9,7 @@ const Crypto = [
         bg: 'fffff',
         iconBg: '#ffff',
         active: true,
+        anim: 'fade-right',
         content: 'Digital currency in which a record of transactions is maintained.',
         icon: (
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -23,6 +22,7 @@ const Crypto = [
         abbr: 'ETH',
         bg: '#ffff',
         active: false,
+        anim: 'zoom-in',
         iconBg: '#1181E8',
         content: 'Blockchain technology to create and run decentralizeddigital applications.',
         icon: (
@@ -35,7 +35,8 @@ const Crypto = [
         name: 'litecoin',
         abbr: 'LTC',
         bg: '#ffff',
-        active: '',
+        active: false,
+        anim: 'fade-left',
         iconBg: false,
         content: 'Cryptocurrency that enables instant payments to anyone in the world.',
         icon: (
@@ -47,30 +48,54 @@ const Crypto = [
 ]
 
 const CryptoCard = () => {
-    const [active, setActive] = useState(null)
+    const [active, setActive] = useState([true, false, false])
+    const ref = useRef(null)
 
-    // const handleClick = () => {
-    //     useEffect(() => {
-    //         function clickHandle() {}
-    //         window.addEventListener('click', handleUserKeyPress)
+    useEffect(() => {
+        const handlesClick = (event) => {
+            console.log('Button clicked')
+        }
 
-    //         return () => {
-    //             window.removeEventListener('keydown', handleUserKeyPress)
-    //         }
-    //     }, [])
-    // }
+        const element = ref.current
+
+        element.addEventListener('click', handlesClick)
+
+        return () => {
+            element.removeEventListener('click', handlesClick)
+        }
+    }, [])
+    // useEffect(() => {
+    //     let elems = handleClick
+    //          setActive(elems.map((e) => e.classList.contains('active')))
+    //
+    // },[])
+
+    function handleClick(e, i) {
+        const elements = document.getElementsByClassName('cryptoCard')
+        const elems = Array.from(elements)
+
+        if (elements[i].classList.contains('active')) {
+            setActive(elems.map((e) => e.classList.contains('active')))
+        } else {
+            let current = elems.find((e) => e.classList.contains('active'))
+            current.classList.remove('active')
+            elems[i].classList.add('active')
+        }
+        setActive(elems.map((e) => e.classList.contains('active')))
+    }
 
     return (
         <div
             id="myDiv"
-            className="mx-auto flex flex-col  justify-center gap-y-4 py-6  lg:flex-row lg:gap-x-[45px]  "
+            className="mx-auto flex flex-col  justify-center  gap-y-6 py-6  lg:flex-row lg:gap-x-[45px]  "
         >
             {Crypto.map((action, i) => {
                 return (
                     <div
                         key={action.name}
+                        onClick={(e) => handleClick(e, i)}
                         className={`${
-                            action.active ? 'bg-[#2B076E]' : ' '
+                            active[i] ? 'active bg-[#2B076E]' : ' '
                         }  cryptoCard mx-auto flex min-h-[433px] max-w-[370px]  cursor-pointer flex-col justify-evenly rounded-2xl sm:shadow-2xl lg:max-w-[370px]   lg:shadow-none `}
                     >
                         <a
@@ -98,16 +123,14 @@ const CryptoCard = () => {
                             <div className="flex">
                                 <h3
                                     className={`text-[32px] font-bold capitalize ${
-                                        action.active ? 'text-[#FFFFFF]' : ''
+                                        active[i] ? 'text-[#FFFFFF]' : ''
                                     } `}
                                 >
                                     {action.name}
                                 </h3>
                                 <div
                                     className={`text-lg font-medium  ${
-                                        action.active
-                                            ? 'text-[#FFFFFF] opacity-70'
-                                            : 'text-[#BDBDBD] '
+                                        active[i] ? 'text-[#FFFFFF] opacity-70' : 'text-[#BDBDBD] '
                                     }`}
                                 >
                                     {action.abbr}
@@ -115,17 +138,17 @@ const CryptoCard = () => {
                             </div>
                             <p
                                 className={` text-center  text-base  ${
-                                    action.active ? 'text-[#FFFFFF]' : ' text-[#828282]'
+                                    active[i] ? 'text-[#FFFFFF]' : ' text-[#828282]'
                                 } `}
                             >
                                 {action.content}
                             </p>
                         </div>
 
-                        <div className="">
-                            {action.active ? (
+                        <div ref={ref} className="">
+                            {active[i] ? (
                                 <button
-                                    className={`mx-auto flex  h-[64px] w-[205px] flex-row items-center justify-center rounded-[32px] bg-[#3671E9] text-white   lg:gap-[24px]`}
+                                    className={`mx-auto flex h-[64px]  w-[205px] flex-row items-center justify-center gap-4 rounded-[32px] bg-[#3671E9] text-white   lg:gap-[24px]`}
                                 >
                                     <h3 className="min-h-[27px] w-[109px] ">Start mining</h3>
                                     <svg
